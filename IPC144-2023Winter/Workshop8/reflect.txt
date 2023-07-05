@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Jong wan Steven Hur
+Student ID#: 122372220
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1.
+The most significant benefit of returning values in two different ways is the fexibility. As a programmer, we should always consider every possibilities of different user experiences. Program is made to benefit users and each user not only has different life experience but also different intention. Providing several different methods to return value would allow software to execute different types of input styles. Secondly, it benefits software by allowing program to use the returned value in different situations. If value is reuturned by variable, it would make it easier to perform the next arithmatic calculation step. Since the variables in the function is a copy, you can do the calculation without making mistake of changing original value in the main. On the other hand, if you return by argument, you can update the actual values from the main. Using two different ways to return the value enhances the program allowing variety of methods to execute the code. 
+
+
+2.
+In this workshop, I think the main function is less than perfect cohesion. In the main function, it includes the logic which compares each of the calculated cost per serving value to each other and decides which one is the cheapest(line 244 ~ 254). It contains two for-loops and two if statement in nested structure. It is not only difficult to read but also sensitive to the changes of other functions. Since the values are not declared as a const, there are possibilitis that accidental change of value may occur. At this point, calculating data information is completed therefore all the data is ready to be used in functions with unmodifiable variable type. I would create another function that only compare and find the cheapest value. 
+Demonstration:
+double findCheapest(const double costPerServ, double cheapestCost)
+{
+	if(costPerServ < cheapestCost)
+	{
+		cheapestCost = costPerServ;
+	}
+	return cheapestCost;
+}
+
+void start(void)
+{
+	i = 0;
+	cheapestCost = dataArr[0].costPerServ
+	for(i = 1; i < MAX_NUM_PROD; i++)
+	{
+		cheapestCost = findCheapest(dataArr[i].costPerServ, cheapestCost);
+	}
+}
+
+From the workshop, calculateReportData function is highly effected by other function. It is because calculateReportdata function use return value of other function to complete the data structure which means that if any mistakes such as wrong variable name or arithmatic calculation occur, calculateReportData function would cause entire process and result. To fix the calculateReportData function, we must go through logic of all other function. This is high coupled code because it is heavily depending on other function. I would have to limit function to return data by address but this way, I will be able to build the loose couple function. 
+Demonstration:
+void calculateServings(const int servingSizeG, const int totalprodGram, double* servResult)
+{
+	double result;
+	result = (float)totalprodGram / (float)servingSizeG;
+
+	*servResult = result;
+}
+void main(void)
+{
+	calculateServings(GRAMS_SUG, data.prodWeightGr, &data.totalNumOfServ);
+}
+
+
+3.
+One of the advantage of passing structures to functions is the efficiency. Sending each individual variables would demand large amount of memory whereas simply sending the entire structure could significantly reduce the amount of memory used. By sending the entire data sturcture, it is also easier to maintain the code. As the project gets bigger and bigger, data stucture size would also get bigger and putting all of the variables as a individual arguments can cause chaotic length of function prototype. In addition, it is not only difficult to read the code but also increases chance to cause errors. 
+
+Currently, displayCatfoodData function receives the each values from the arrey one at a time. However, if you pass the entire structure using pointer, it would be easier to maintain the parameters. In future, you might want to add more elements to display and having entire arrey of structures would simplify the work. Instead of finding the index of the value that you want to additionaly display, you can simply add pointer refering to the value that you wish to add.
+displayCatFoodData(catInfoArr[i].sku, &catInfoArr[i].productPrice, &catInfoArr[i].productWeightLbs, catInfoArr[i].caloriesPerServ);
+>> displayCatFoodData(&infoArr[i]);

@@ -1,0 +1,6 @@
+﻿  core.c
+C:\Users\jong wan\Desktop\School\IPC144_NCC\ms1\core.c(98,46): warning C4047: '!=': 'char *' differs in levels of indirection from 'int'
+C:\Users\jong wan\Desktop\School\IPC144_NCC\ms1\core.c(93,9): warning C4101: 'i': unreferenced local variable
+C:\Users\jong wan\Desktop\School\IPC144_NCC\ms1\core.c(119,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jong wan\Desktop\School\IPC144_NCC\ms1\core.c(110): warning C4715: 'inputCharOption': not all control paths return a value
+  a1ms1.vcxproj -> C:\Users\jong wan\Desktop\School\IPC144_NCC\ms1\x64\Debug\a1ms1.exe

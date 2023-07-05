@@ -1,0 +1,4 @@
+﻿  w6p2.c
+C:\Users\jong wan\Desktop\School\IPC144_NCC\Workshop6\w6p2.c(119,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\jong wan\Desktop\School\IPC144_NCC\Workshop6\w6p2.c(155,61): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Workshop6.vcxproj -> C:\Users\jong wan\Desktop\School\IPC144_NCC\Workshop6\x64\Debug\Workshop6.exe

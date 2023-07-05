@@ -1,0 +1,33 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Jong wan Steven Hur
+Student ID#: 122372220
+Email      : shur1@myseneca.ca
+Section    : NCC
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1.
+Although price 1 is declared as a float varible the value of 17.96 cannot be stored given the properties of float variable; 
+the property of values are stored as 32 bits whereas doubles are stored as 64bits. Hence, price 2 and price 4 are converted correctly to double.
+price 3 may seem like a outlier given that it is declared as a float but the value 17.98 can be expressed within 32bits concluding that only price 1 contains descrapencies.
+
+
+2.
+Although variable 'money' is declared as an int, it is divided by 100.0. Implicit coercision occur so complier converts the answer into double.
+Second example, (double) is casted on 100 therefore result is successfully converted into double.
+Similar to second example, third example also used cast to successfully convert money into double which causes explicit coercion.
+Result of all three examples correspond to the spcifier therefore they work as intended.
+
+3.
+a)72. Because money is declared as an integer and divided by integer, implicit coercision occur so .45 value gets truncated.
+b)1.0.00, 2.72, 3.0.00, 4.72
+c)When money is divided by 100, implcit coercision occur so compiler converts the result into double. Spcifier requires double therefore the lose of data occurs.
+Furthermore, result is declared as an integer so it does not correspond to the specifier which is double.
+Specifier and type has to be corresponding to each other in order to print intended output. 

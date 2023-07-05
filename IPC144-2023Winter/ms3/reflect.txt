@@ -1,0 +1,47 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3 - Reflection
+Full Name  :    Jong wan Steven Hur
+Student ID#:    122372220
+Email      :    shur1@myseneca.ca
+Section    :    NCC
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1.
+void sortData(struct Appointment app[], int max);
+- The sortData function takes an array of Appointment structures and the maximum number of appointments as parameter. It iterate through the year, month, day, hour and minute of each appointment to sort the data in ascending order. The biggest advantage of sortData function is providing enhanced user experience. At first, appointment is in random order which takes user to go through each line of appointment to find a specific information. If the data is in chronogical order, it makes easier for the user to view their appointments and plan their schedule. Additionally, sorting the appointments can help the user fasten the procedure of identifying any conflicts or overlapping appointments. 
+
+int appointmentCheck(const struct Date date, struct Appointment* app, int maxAppointments, int patientNumber);
+- The appointmentCheck function checks if a given appointment date is valid by comparing it with all other appointments. If there is no existing appointment found referring to the provided date, the function returns 1. On the other hand, if there is a existing appointment, it returns 0. This function prevent scheduling conflicts and wasting time of going through entire appointment list to check the existing appointments. 
+
+void getDate(int* year, int* month, int* day);
+- function prompts the user to enter the year, month, and day and stores the input in the corresponding variables. It performs basic input validation to ensure that the entered year, month and day are valid. There are chances that user may press wrong key by mistake or entered day might not be available in any kind of reason. Furthermore, immature user may decide to input random words or even a negative number therefore, input must be validated beforehand. By providing a single function to perform all these components, the application becomes more user-friendly and efficient. Additionally, the input validation helps to prevent errors caused by invalid user input. 
+
+
+2.
+The scanf usage in the clinic.c file was significantly reduced because it can produce error and is inefficient. In clinic.c file, there are many incidents where user input type is a character. The reason why character input causes problem is that the input buffer will grap the new line character. In most cases, user will use keyboard to input the data which goes into input buffer first, and then inserted to the variable. If, in any case, the value in the input buffer exceedes the memory of data type, remaining input will stay in the input buffer. When next scanf asks user to input a value, input buffer will automatically release the remainder value it was holding. However, it is possible to prevent the error by using the clearInputBuffer function but it will face efficiency problem. As the program gets larger and larger, it will require hundreds of input from user and if it calls clearInputBuffer function for every single scanf, it surely makes the code difficult to manage. To avoid these incidents, I included separate input functions such as inputIntRange and inputCharOption which contains the clearInputBuffer function. 
+
+3.
+void sortData(struct Appointment app[], int max);
+I included sortData function in the core.c module. One of the major reason is that this function has potential to be used in many different situations. For example, in future, there may be new module that could be added to the program such as gathering patient's weight, height, age or even the address. I can simply include core.h file to utilize the sort function whereas, clinic.h contains functions which are dedicated to clinic.c module. In addition, sortData function has charactersitics of general usage. Every information is more effective and readable when it is displayed in sorted order. By simply changing the parameter, I can utilize this fuction in many different modules. It is important to point out that the main purpose of designing the function is to provide better user experience.
+
+int appointmentCheck(const struct Date date, struct Appointment* app, int maxAppointments, int patientNumber);
+I included appointmentCheck function to clinic.c module because it is intended to help clinic.c module to provide enhancements. Compare to sortData function mentioned above, appointmentCheck function is specifically designed to enhance clinic.c module functions. As the name of the function is self-explainatory, it is intended to check the appointments and prevent the catastrophy of deleting or changing a wrong appointment.
+
+void getDate(int* year, int* month, int* day);
+The getDate fuction is included in core.c module. This function not only takes the date input from the user but also validate the input to be in specific range of numbers. At the beginning, I wanted to include it in the clinic.c module but I realized the potential of this function. For instance, it could be used by a school teacher might want to collect and create a list of birthdays of students or a user who wants to create list of schedule which always include dates. My intention is to separate the function that can be used in other general situtation similar to inputInt function in core.c module, from clinic.c functions which is specifically designed to enhance a single program.
+
+
+
+
+
+
+
+
+
+

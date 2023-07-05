@@ -1,0 +1,46 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #7
+Full Name  : Jong wan Steven Hur
+Student ID#: 122372220
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. 
+Yes I was successful in coding most of non-reptetitive sections of logic. During the lab class, I got little help from professor Robson which gave me great idea of using modulo operator. This helped me designing the code for printing the game path and the position ruler. Using modulo operator and for loop, I divided each number with the maximum length of the game path and print the amount. Also, the for loop only iterates until it reaches the maximum length of the game path.
+Every 10th of the ruler, I divided i with 10 so it will leave me with the 10th digit of the number. 
+For the player position, I started with simple assumption that the player's next move can help me find where to print the character symbol. I created a for loop to iterate untill it reaches the maximum length of the game and I added an if statement to check if the i is equal to the value of player's next move. if they are equal, I printed the character symbol and update i value to maximum length of the path length to finish the iteration or if it is not equal, I printed empty space. 
+Printing the actual board took me some more time to write and validate the logic but I managed to complete it at once. First, I declared the array of the game board and filled it with '-' character for the basic set of the board. Secondly, I updated the board on each case of bomb, treasure or nothing found with designated character. I used player's 'next move - 1' as a index of the board so that I replace the character in same location where player landed.
+
+2.
+First, by using structures you can simplify the program. Without struct, you will needed to declare multiple variables which will make the code more difficult to read as the program gets bigger and bigger. Instead of declaring individual variables for each data, you can store related data into one struct and group them together. For example, to store a person's information, there may be lots of different kind of information must be handled such as name, age, birthday, height, weight and etc. You can declare variable for each of these information but it will make it difficult to find them or manage them. By using structures, you will be able to put them all in one group and easily manage them.
+Secondly, it allows you to pass multiple diffierent data types as arguments to functions in more precise way. If you pass those arguments in variables, it will not only be difficult to manage but also can lead programmers to make critical mistakes. By simply passing the struct which contains all the necessary information, it makes the code more modular and easier to maintain. 
+Lastly, structures allow you to manage the data in one place. Often, you face a situation where some data must be changed or fixed. If all the data were declared in sparate variables, you will have to look through the entire code and find each variables that need to be updated. However, in struct, data is already grouped in one block so you can easily iterate through the data and update them. 
+If you do not use structs, it would require much more time to update or repair the variables since you would have to go through every line to find where the variables are used. In this case, there are high chances that you may make mistakes which will cause another journey through the unnecessary prodecure of inspection of the entire program. 
+
+3.
+do
+{
+   if (pInfo.positionHistory[nextMove-1] == 1)
+   { 
+   } 
+   else
+   {
+	 if (gInfo.bombLocation[nextMove-1] == 1 && gInfo.treasureLocation[nextMove - 1] == 1)
+       {
+	 }
+       else if (gInfo.bombLocation[nextMove - 1] == 1)
+       {
+       }
+       else if (gInfo.treasureLocation[nextMove - 1] == 0)
+       {
+       }
+       else
+       {
+       }
+   }
+} while (gInfo.maximumMoves > 0 && pInfo.numberOfLives > 0);

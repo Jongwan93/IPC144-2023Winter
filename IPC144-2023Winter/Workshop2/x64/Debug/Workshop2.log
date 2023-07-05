@@ -1,0 +1,16 @@
+﻿  w2p1.c
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(703,5): error MSB6006: "CL.exe" exited with code 2.
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(43,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(43,9): message : consider using '%zd' in the format string
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(43,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'unsigned __int64'
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(43,9): message : consider using '%lld' in the format string
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(43,9): message : consider using '%Id' in the format string
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(43,9): message : consider using '%I64d' in the format string
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(55,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(55,9): message : consider using '%zd' in the format string
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(56,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(56,9): message : consider using '%zd' in the format string
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(102,11): warning C4244: '+=': conversion from 'long' to 'short', possible loss of data
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(99,17): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(11,14): warning C4101: 'gdxg': unreferenced local variable
+C:\Users\Steven Hur\Desktop\School\IPC144_NCC\Workshop2\w2p1.c(12,8): warning C4101: 'mid': unreferenced local variable

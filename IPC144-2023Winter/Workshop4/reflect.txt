@@ -1,0 +1,102 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : Jong wan Steven Hur
+Student ID#: 122372220
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1.
+int pick, quit = 1;
+
+while (quit != 0)
+I wraped the entire process with while loop so that the program will not stop looping until user inputs 0 at the end.
+The while loop condition indicates the input of the quit variable must be 0 to stop the loop therefore 
+I declared the initial value of 'quit' to 1. 
+
+	  printf("Grocery Shopping\n");
+	  printf("================\n");
+       printf("How many APPLES do you need? : ");
+       scanf("%d", &apples);
+       while (apples < 0)
+       {
+            printf("ERROR: Value must be 0 or more.\n");
+            printf("How many APPLES do you need? : ");
+            scanf("%d", &apples);
+       }
+I used while loop again here to repeat the process until user inputs the correct number.
+Program will only fall into while loop when variable 'apples' is negative number or 0.
+Program will ask the same question until user inputs number that is greater than 0.
+If user successfully inputs the positive number at the first time, while loop will be ignored.
+
+
+	    while (apples > 0)
+        {
+            printf("Pick some APPLES... how many did you pick? : ");
+            scanf("%d", &pick);
+            if (pick <= 0)
+            {
+                printf("ERROR: You must pick at least 1!\n");
+            }
+            else if (pick > apples)
+            {
+                printf("You picked too many... only %d more APPLE(S) are needed.\n", apples);
+            }
+            else
+            {
+                apples -= pick;
+                if (apples > 0)
+                {
+                    printf("Looks like we still need some APPLES...\n");
+                }
+                else
+                {
+                    printf("Great, that's the apples done!\n");
+                    printf("\n");
+                }
+            }
+        }
+There are serveral inputs cases to consider. First, user's input may be greater than what is already asigned to
+each fruit variables. Second, user's input may be negative number or 0. Lastly, user's input is greater than 0, 
+but lesser than the each fruit variable. Most simple logic of all three was when user's input is negative number or 0.
+There are no other things to consider other than asking user to re-input the number. That is why I put this case first.
+Next case I considered was when user's pick is greater than the fruit variable. Similar to the previous logic,
+it prints the message that the input must be lesser than the fruit variable. All the other conditions that
+the input is between 1 and the fruit variable, will fall into the 'else'. I subtracted user's input from the
+fruit variable and when the result is greater than 0, program will stay in the loop and ask user to pick more fruits.
+If the result is 0, logic will fall into 'else'.
+
+
+2.
+From this Workshop, the biggest adventage the nesting feature provided was the "Do another shopping" part.
+I simply nested the entire code with while loop with (quit != 0) condition so program can redo the entire 
+process again or terminate the program. If there was no nesting feature, I would have to copy the entire
+program and paste as many times as user wants to use the program or program will have to stop and initiated again
+on each use. Nesting logic not only saves time but also increases efficiency. 
+
+3.
+The biggest adventage of using else if expression is that the program does not have to consider the other possibilities
+which are already filtered by previous if expression. It saves memory and time so that program can execute with
+better efficiency. 
+example)
+
+		int num;
+		if (num == 1)
+		{
+			print("hi\n");
+		{
+		else if (num == 2)
+		{
+			print("bye\n");
+		}
+				.
+				.
+				.
+From the example, case when input is 1 is filtered by first if. Program does not have to consider the
+input case '1' again when it is checking for else if (num == 2) line. 
+If I write else if (num == 2) as if (num == 2), program will check if num is 1 again which is waste of memory.
+It may seem small but as the project gets larger and larger, the effect would become significant.

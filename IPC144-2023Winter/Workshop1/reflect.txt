@@ -1,0 +1,37 @@
+///////////////////////////////////////////////////////////////////////////
+
+                              Reflection
+                             Workshop - #1
+Full Name  : Jong wan Steven Hur
+Student ID#: 122372220
+Email      : shur1@myseneca.ca
+Section    : NCC
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1.Do you have any previous programming experience? If so, what language(s)? If not, what are your initial 
+thoughts about the C language and this course?
+
+-Yes, I do have some programming experience. I was always interested in programming so I learned how to code in Java. 
+I learned for loop, while loop, sorting and few basic commands. I also tried to teach myself in Python but did not go well.
+
+
+2. Describe your understand of the compiling process of turning a C text file into an executable program.
+
+- Programmer create a source code on C program and compiler take that source code to chnage it to binary code which is machine language. 
+Binary code executes the program to take input and shows the output for the users.
+
+
+3. What do you hope to achieve in this course? Describe your goals and expectations.
+
+- My final goal is to get a job in Google. I have few friends who are currently working in Silicon Valley and 
+I visited them couple years ago. They gave me tours during the working day and I aboslutely loved their life style and working enviornment.
+They also told me that they mostly code in C++ language. 
+I want to learn not only how to code efficiently but also the fundamentals of the language.
+

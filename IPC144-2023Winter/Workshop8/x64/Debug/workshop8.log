@@ -1,0 +1,3 @@
+﻿  w8p2.c
+C:\Users\jong wan\Desktop\School\IPC144_NCC\workshop8\w8p2.c(122,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  workshop8.vcxproj -> C:\Users\jong wan\Desktop\School\IPC144_NCC\workshop8\x64\Debug\workshop8.exe

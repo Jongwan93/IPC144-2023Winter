@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Jong wan Steven Hur
+Student ID#: 122372220
+Email      : shur1@myseneca.ca
+Section    : NCC
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1. serving >= 1 && serving <= 4 && bagWeight1 <= 250 || 
+   serving >= 5 && serving <= 9 && bagWeight1 > 250 && bagWeight1 <= 500 || 
+   serving >= 10 && bagWeight1 > 500 && bagWeight1 <=1000,
+A) I used 10 relational expressions. 
+	serving >= 1 : this expression identify that the variable 'serving' is greater than or equal to 1
+	serving <= 4 : this expression identify that the variable 'serving' is less than or equal to 4
+	bagWeight1 <= 250 : this expression identify that the variable 'serving' is less than or equal to 250
+	serving >= 5 : this expression identify that the variable 'serving' is greater than or equal to 5
+	serving <= 9 : this expression identify that the variable 'serving' is less than or equal to 9
+	bagWeight1 > 250 : this expression identify that the variable 'serving' is greater than 250
+	bagWeight1 <= 500 : this expression identify that the variable 'serving' is less than or equal to 500
+	serving >= 10 : this expression identify that the variable 'serving' is greater than or equal to 10
+	bagWeight1 > 500 : this expression identify that the variable 'serving' is greater than 500
+	bagWeight1 <=1000 : this expression identify that the variable 'serving' is less than or equal to 1000
+B) I used 9 relational expressions.
+	serving >= 1 && serving <= 4 && bagWeight1 <= 250 || : this expression identify that the variable 'serving' is greater than or equal to 1 AND less than equal to 4 AND 'bagWeight1' is less than or equal to 250 OR,
+	serving >= 5 && serving <= 9 && bagWeight1 > 250 && bagWeight1 <= 500 || : variable 'serving' is greater than or equal to 5 AND less than or equal to 9 AND 'bagWeight1' is greater than 250 AND 'bagWeight1' is less than or equal to 500 OR,
+	serving >= 10 && bagWeight1 > 500 && bagWeight1 <=1000 : variable 'serving' is greater than or equal to 10 AND 'bagWeight1' is greater than 500 AND 'bagWeight1' is less than or equal to 1000.
+
+2. Applying DeMorgan's Law : (p1Price + p2Price + p3Price) / 3
+   NOT using DeMorgan's Law : p1Price /3 + p2Price /3 + p3Price /3
+   I used the method with DeMorgan's Law. All three variables are divided by same number, '3'. Therefore, using DeMorgan's Law is more efficient and readable.
+
+3. 
+way Number 1:
+char type1, type2, type3, cream1, cream2, cream3
+int bagWeight1, bagWeight2, bagWeight3,
+char strength, userCream;
+int serving;
+
+way Number 2:
+char type1, type2, type3, cream1, cream2, cream3, strength, userCream;
+int bagWeight1, bagWeight2, bagWeight3, serving;
+
+I prefer to organize my variables in number 1. First two lines are the variables for product information being sold today
+and last two lines are the variables for customer preferences.
+This way, it is easier to find the variables that I am looking for according to the logic that I am currently working on.
